@@ -2,6 +2,5 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Serve your existing front end (public/index.html + public/app.js) at "/"
+Route::get('/', fn () => response()->file(public_path('index.html')));
